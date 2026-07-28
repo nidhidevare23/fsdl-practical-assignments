@@ -19,7 +19,7 @@ Subject: Full Stack Development Lab
 - GitHub Pages
 
 ## Hosted Profile Website
-Live Link: https://username.github.io/fsdl-practical-assignments/
+Live Link: https://fsdl-practical-assignments-kappa.vercel.app/
 
 ## Repository Link
 https://github.com/username/fsdl-practical-assignments
