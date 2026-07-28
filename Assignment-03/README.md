@@ -1,7 +1,7 @@
 # Assignment 03
 
 ## Overview
-This assignment contains an e-commerce website with features such as product display, cart management, and filtering.
+This assignment contains an e-commerce website with features such as product display, cart management, and filtering. 
 
 ## Contents
 - Source code: [source-code](source-code/)
