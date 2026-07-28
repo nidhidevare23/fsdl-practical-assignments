@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nidhi Devare | Computer Engineering Student</title>
+<meta name="description" content="Nidhi Devare — Computer Engineering student building agentic AI systems, RAG pipelines, and full-stack applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="win-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="logo">nidhi<span class="accent">@</span>devare<span class="cursor">_</span></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navLinks">
+      <li><a href="#home" class="active">home</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text reveal">
+      <p class="prompt">$ whoami</p>
+      <h1>Nidhi Devare<span class="cursor">_</span></h1>
+      <h3 class="type-line">Computer Engineering Student</h3>
+      <p class="hero-desc">I design and ship <strong>agentic AI systems</strong> — retrieval pipelines, reasoning agents, and the full-stack apps that put them in front of real users.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">view_projects()</a>
+        <a href="#contact" class="btn btn-ghost">say_hello()</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="photo-frame">
+        <div class="win-dots"><span></span><span></span><span></span></div>
+        <img src="assets/profile.jpg" alt="Nidhi Devare">
+        <div class="badge"><span class="dot"></span> open to opportunities</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pipeline reveal" aria-hidden="true">
+    <span class="pipeline-caption">// how i build</span>
+    <div class="pipeline-track">
+      <div class="pnode"><span class="pdot"></span><span class="plabel">query</span></div>
+      <div class="pline"></div>
+      <div class="pnode"><span class="pdot"></span><span class="plabel">retrieve</span></div>
+      <div class="pline"></div>
+      <div class="pnode"><span class="pdot"></span><span class="plabel">reason</span></div>
+      <div class="pline"></div>
+      <div class="pnode"><span class="pdot"></span><span class="plabel">respond</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="reveal">
+  <p class="prompt center">$ cat about.md</p>
+  <h2>About Me</h2>
+  <div class="card about-card">
+    <p><span class="comment"># role</span> Computer Engineering student, class of 2027</p>
+    <p><span class="comment"># focus</span> Machine Learning, Data Science, Agentic AI, Full-Stack Development</p>
+    <p><span class="comment"># description</span> I enjoy building AI-powered applications using Python, FastAPI, SQL, and modern web technologies — turning research-grade ideas into systems people can actually use.</p>
+  </div>
+</section>
+
+<section id="education" class="reveal">
+  <p class="prompt center">$ git log --education</p>
+  <h2>Education</h2>
+  <div class="card edu-card">
+    <div class="edu-top">
+      <span class="commit-hash">#b.tech</span>
+      <span class="edu-years">2023 — 2027</span>
+    </div>
+    <h3>B.Tech, Computer Engineering</h3>
+    <p class="edu-sub">Pimpri Chinchwad College of Engineering</p>
+    <div class="progress-row">
+      <div class="progress-track"><div class="progress-fill" id="eduProgress"></div></div>
+      <span class="progress-label" id="eduProgressLabel">in progress</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <p class="prompt center">$ ls skills/</p>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card skill-card">
+      <h3><span class="folder">/</span>languages</h3>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">Java</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3><span class="folder">/</span>frameworks</h3>
+      <div class="tags">
+        <span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">LangGraph</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3><span class="folder">/</span>tools</h3>
+      <div class="tags">
+        <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Docker</span><span class="tag">Postman</span><span class="tag">VS Code</span>
+      </div>
+    </div>
+    <div class="card skill-card">
+      <h3><span class="folder">/</span>ai-ml</h3>
+      <div class="tags">
+        <span class="tag">RAG</span><span class="tag">NLP</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">Scikit-learn</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <p class="prompt center">$ git log --projects --oneline</p>
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card project-card">
+      <div class="win-dots"><span></span><span></span><span></span></div>
+      <p class="filepath">~/projects/enterprise-rag</p>
+      <h3>Enterprise RAG</h3>
+      <p>Production-ready Retrieval-Augmented Generation backend built with FastAPI, Qdrant, and Ollama.</p>
+      <div class="tags">
+        <span class="tag">FastAPI</span><span class="tag">Qdrant</span><span class="tag">Ollama</span>
+      </div>
+    </div>
+    <div class="card project-card">
+      <div class="win-dots"><span></span><span></span><span></span></div>
+      <p class="filepath">~/projects/tracefix-agent</p>
+      <h3>TraceFix Agent</h3>
+      <p>Agentic AI debugging assistant that traces, diagnoses, and proposes fixes, built with LangGraph and FastAPI.</p>
+      <div class="tags">
+        <span class="tag">LangGraph</span><span class="tag">FastAPI</span>
+      </div>
+    </div>
+    <div class="card project-card">
+      <div class="win-dots"><span></span><span></span><span></span></div>
+      <p class="filepath">~/projects/homedoc-ai</p>
+      <h3>HomeDoc AI</h3>
+      <p>Healthcare platform that uses OCR and AI to interpret medical reports for patients.</p>
+      <div class="tags">
+        <span class="tag">OCR</span><span class="tag">AI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <p class="prompt center">$ contact --send</p>
+  <h2>Get in Touch</h2>
+  <div class="card contact-card">
+    <div class="contact-row">
+      <span class="contact-label">email</span>
+      <span class="contact-value">devarenidhi@gmail.com</span>
+      <button class="copy-btn" id="copyEmail" data-email="devarenidhi@gmail.com">copy</button>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">phone</span>
+      <span class="contact-value">+91 75593 92867</span>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">github</span>
+      <a class="contact-value link" href="https://github.com/devarenidhi25" target="_blank" rel="noopener">github.com/devarenidhi25</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">linkedin</span>
+      <a class="contact-value link" href="https://www.linkedin.com/in/nidhi-devare-a52881272/" target="_blank" rel="noopener">in/nidhi-devare</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>$ echo "© 2026 Nidhi Devare — built line by line."</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

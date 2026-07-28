@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Weather Dashboard</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 20px;
+            padding: 20px;
+        }
+        .h1 {
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {    
+            margin-bottom: 10px;
+        }
+
+        .line {
+            fill:none;
+            stroke-width: 3;
+        }
+
+        .temp {
+            stroke: red;
+        }
+        .humidity {
+            stroke: blue;
+        }
+        .rainfall {
+            stroke: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>☁️Weather Monitoring Dashboard</h1>
+
+<div class="card">
+    <h2> Weekly weather report</h2>
+    <svg width="600" height="400"></svg>
+</div>
+
+
+
+<script>
+    const rainfallLine = d3.line()
+    .x(d => x(d.day))
+    .y(d => y(d.rainfall));
+    const data = [
+        {day:"Mon", temp:32, humidity:60, rainfall:5},
+        {day:"Tue", temp:30, humidity:65, rainfall:10},
+        {day:"Wed", temp:28, humidity:70, rainfall:15},
+        {day:"Thu", temp:31, humidity:55, rainfall:0},
+        {day:"Fri", temp:29, humidity:68, rainfall:8},
+        {day:"Sat", temp:27, humidity:72, rainfall:20},
+        {day:"Sun", temp:30, humidity:63, rainfall:12}
+    ];
+
+    const svg = d3.select("svg"),
+    margin = {top:30, right:40, bottom:50, left:60},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom;
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const x = d3.scalePoint()
+        .domain(data.map(d => d.day))
+        .range([0, width]);
+    const y = d3.scaleLinear()
+    .domain([0, 100])
+    .range([height, 0]);
+    g.append("g")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x));
+    
+    g.append("g")
+    .call(d3.axisLeft(y));
+    const tempLine = d3.line()
+    .x(d => x(d.day))
+    .y(d => y(d.temp));
+
+    const humidityLine = d3.line()
+    .x(d => x(d.day))
+    .y(d => y(d.humidity));
+
+    g.append("path").datum(data).attr("class", "line temp").attr("d", tempLine);
+    g.append("path").datum(data).attr("class", "line humidity").attr("d", humidityLine);
+    g.append("path").datum(data).attr("class", "line rainfall").attr("d",rainfallLine);
+    
+    const legend = g.append("g").attr("transform", "translate(10, 10)");
+    legend.append("rect").attr("width",12).attr("height",12).attr("fill","red");
+    legend.append("text").attr("x", 20).attr("y", 10).text("Temperature (°C)");
+    legend.append("rect").attr("y", 20).attr("width",12).attr("height",12).attr("fill","blue");
+    legend.append("text").attr("x", 20).attr("y", 30).text("Humidity (%)");
+    legend.append("rect").attr("y", 40).attr("width",12).attr("height",12).attr("fill","green");
+    legend.append("text").attr("x", 20).attr("y", 50).text("Rainfall (mm)");
+
+
+    
+</script>
+
+</body>
+</html>

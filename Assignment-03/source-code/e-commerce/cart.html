@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - ELARA</title>
+    <link rel="stylesheet" href="catrt.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./image.png" alt="Brand Logo">
+        </div>
+        <nav class="navbar" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shopping</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cart-container">
+        <h1>Your Shopping Cart</h1>
+        
+        <div id="cart-items"></div>
+        
+        <p id="empty-msg">Your cart is currently empty. <a href="shop.html" style="color: #e74c3c; text-decoration: none; font-weight: 600;">Continue Shopping →</a></p>
+        
+        <div class="cart-summary" id="summary-section" style="display: none;">
+            <div class="summary-row">
+                <span class="summary-label">Subtotal:</span>
+                <span class="summary-value" id="subtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Shipping:</span>
+                <span class="summary-value" id="shipping">FREE</span>
+            </div>
+            <div class="summary-row summary-total">
+                <span class="summary-label">Total:</span>
+                <span class="summary-value" id="total-amount">₹0</span>
+            </div>
+        </div>
+
+        <div class="cart-actions" id="actions-section" style="display: none;">
+            <button id="checkout-btn">Proceed to Checkout</button>
+            <button id="clear-cart-btn">Clear Cart</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="render-cart.js"></script>
+</body>
+</html>

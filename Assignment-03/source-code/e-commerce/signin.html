@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <!-- <button id="menu-toggle">☰</button> -->
+        <nav class="navbar" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stores.html">Stores</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    <div class="signin-container">
+        <h2>Sign In to Your Account</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+    <script src="signin.js"></script>
+    
+
+</body>
+</html>
